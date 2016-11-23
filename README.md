@@ -23,3 +23,15 @@ Retrieve the current users Mentor's available time slots. `mentor_id` is listed 
 ```
 > kele_client.get_mentor_availability(mentor_id)
 ```
+
+Retrieve the Roadmap for current user.
+
+```
+>  kele_client.get_roadmap(roadmap_id)
+```
+
+Retrieve checkpoints for current user.
+
+```
+>  kele_client.get_checkpoint(checkpoint_id)
+```
