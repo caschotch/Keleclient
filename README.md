@@ -35,3 +35,10 @@ Retrieve checkpoints for current user.
 ```
 >  kele_client.get_checkpoint(checkpoint_id)
 ```
+
+Retrieve a list of messages, respond to an existing message, and create a new message thread.
+```
+kele_client.get_messages        #returns all messages
+kele_client.get_messages(1)     # returns the first page of message threads
+```
+
