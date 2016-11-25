@@ -50,10 +50,15 @@ kele_client.get_messages(1)     # returns the first page of message threads
 kele_client.create_submission(checkpoint_id, assignment_branch, assignment_commit_link, comment, enrollment_id)
 ```
 checkpoint_id - The checkpoint ID retrieved from the get_checkpoint
+
 assignment_branch - The Github branch for the assignment
+
 assignment_commit_link - The GitHub commit link for the assignment
+
 Comment - assignment submission comment
+
 enrollment_id - The student's enrollment id - retrieved from the get_me
+
 
 *Update an assignment*
 
@@ -61,8 +66,13 @@ enrollment_id - The student's enrollment id - retrieved from the get_me
 kele_client.update_submission(checkpoint_submission_id, checkpoint_id, assignment_branch, assignment_commit_link, comment, enrollment_id)
 ```
 checkpoint_submission_id - Retrieved when submitting an assignment in the response
+
 checkpoint_id - The checkpoint ID retrieved from the get_checkpoint
+
 assignment_branch - The Github branch for the assignment
+
 assignment_commit_link - The GitHub commit link for the assignment
+
 Comment - assignment submission comment
+
 enrollment_id - The student's enrollment id - retrieved from the get_me
