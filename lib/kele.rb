@@ -52,6 +52,19 @@ class Kele
         response = self.class.post(api_url("checkpoint_submissions"), body: values, headers: { "authorization" => @auth_token })
         puts response
     end
+    
+    def update_submission(checkpoint_submission_id, checkpoint_id, assignment_branch, assignment_commit_link, comment, enrollment_id)
+        values = {
+            "assignment_branch" => assignment_branch,
+            "assignment_commit_link" => assignment_commit_link,
+            "checkpoint_id" => checkpoint_id,
+            "comment" => comment,
+            "enrollment_id" => enrollment_id
+        }
+        response = self.class.put(api_url("checkpoint_submissions/#{checkpoint_submission_id}"), body: values, headers: { "authorization" => @auth_token })
+        puts response
+    end
+
 
     private
     def api_url(endpoint)
@@ -59,3 +72,6 @@ class Kele
     end
 end
 #mentor_id 2345139
+#[6] pry(main)> kele_client.create_submission(2354, " "," ","Testing kele_client.create_submission",19220)
+#{"id"=>143638, "status"=>"submitted", "work_commit_link"=>nil, "assignment_branch"=>" ", "assignment_commit_link"=>" "}
+#=> nil
